@@ -6,9 +6,9 @@ if /I "%c%" EQU "Y" goto :fastboot
 if /I "%c%" EQU "N" goto :continue
 goto :choice
 :fastboot
-adb reboot bootloader
+.\adb reboot bootloader
 goto :continue
 :continue
-fastboot flash recovery twrp.img
-fastboot flash vbmeta vbmeta.img
-fastboot reboot recovery
+.\fastboot flash recovery twrp.img
+.\fastboot flash vbmeta vbmeta.img
+.\fastboot reboot recovery
